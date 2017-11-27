@@ -1,12 +1,14 @@
 # image-kubernetes
 A Scaleway Image config for a Ubuntu Xenial Kubernetes Image
 
+```
 export ARCH=amd64  # can be 'i386', 'amd64' or 'armhf'  
 wget "https://github.com/scaleway/scaleway-cli/releases/download/v1.13/scw_1.13_${ARCH}.deb" -O /tmp/scw.deb  
 sudo dpkg -i /tmp/scw.deb && rm -f /tmp/scw.deb  
 
 sudo scw login  
 sudo scw run --name="kubernetes" image-builder  
+```
 
 # build this image
 
